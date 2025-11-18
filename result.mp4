@@ -1,1 +1,10 @@
 🏆 Results 
+
+Once the application starts, the webcam feed is processed in real time using OpenCV. 
+At the same time, MediaPipe Hands extracts 21 landmark coordinates from the user's hand, allowing the system to understand the relative position of each finger.
+Based on these landmarks, the program applies simple geometric rules to classify the gesture into Rock (all fingers closed), Paper (all fingers open), or Scissors 
+(only index and middle finger extended).
+After the user’s gesture is detected, the computer randomly chooses its own move. 
+The game logic then compares both moves and determines the winner according to classic Rock–Paper–Scissors rules.
+The result, along with the running score, is displayed on the screen. 
+To avoid accidental repeated detections, a 5-second cooldown timer is applied after each round, while hand tracking continues smoothly in the background.
